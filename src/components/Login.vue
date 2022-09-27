@@ -1,9 +1,9 @@
 <template>
-    <form>
+    <form @submit.prevent="hundleSubmit">
         <h3>LOGIN</h3>
         <div class="form-group">
             <label>Phone Number</label>
-            <input type="number" class="form-control" placeholder="Phone number" />
+            <input type="text" class="form-control" placeholder="Phone number" />
         </div>
 
         <div class="form-group">
@@ -17,6 +17,11 @@
 
 <script>
     export default {
-        name: 'L-o-g-i-n'
+        name: 'L-o-g-i-n',
+        methods: {
+            handleSubmit(){
+                console.log('submited');
+            }
+        }
     }
 </script>
